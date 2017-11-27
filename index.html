@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Welcome to my WebPage!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta description="This is a web page">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="./main.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Menu</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">More About Boulder</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Activities</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input id="textbox" class="form-control mr-sm-2" type="text" placeholder="Enter Duration of Stay" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="title-bar">
+      <h1>Alex Moll - Brief Biography</h1>
+    </div>
+    <div class="row">
+      <div class="col-lg-7 col-md-7 col-sm-9 col-xs-12">
+        <p>Alex was born in Worcester, Massachusetts and moved to Colorado in 1992. He lives in Erie with his wife Kristina and 4 boys: Tyler (15), Zack (11), Braydon (9) and Colton (9).</p>
+        <h4>Favorite Places to Eat</h4>
+        <div class="row">
+          <div class="col">Hapa Sushi</div>
+          <div class="col">Pasta Jay's</div>
+        </div>
+        <div class="row">
+          <div class="col">The Med</div>
+          <div class="col">Flagstaff House</div>
+        </div>
+
+        <h4>Portfolio Goals</h4>
+        <p>Alex's goal is to create an interactive website called itinerator that gives out-of-towners the ability to maximize their enjoyment during a stay in Boulder, CO. Users can specify a time frame that they have available to stay, different types of activities, and a type of cuisine.
+        The application will return an optimized itinerary of events, along with a description of each event, directions, and a map.</p>
+        <h4>Hobbies</h4>
+        <div class="row">
+          <div class="col">Skiing</div>
+          <div class="col">Backpacking</div>
+          <div class="col">Tennis</div>
+          <div class="col">Ping Pong</div>
+        </div>
+        <h4>Favorite Trails</h4>
+        <div class="row">
+          <div class="col">Chautauqua</div>
+          <div class="col">Royal Arch</div>
+          <div class="col">Sanitas</div>
+          <div class="col">Boulder Creek Trail</div>
+        </div>
+        <button onclick="start()">Start Timer</button>
+        <button onclick="end()">End Timer</button>
+        <p></p>
+        <br>
+        <h4>Links</h4>
+        <a id="bVisit" onclick="recordLink()" href="https://www.bouldercoloradousa.com/things-to-do/must-see-boulder/">Visit Boulder</a><br>
+        <a id="bRestaurants" onclick="recordRest()" href="https://www.tripadvisor.com/Restaurants-g33324-Boulder_Colorado.html">Boulder Restaurants</a>
+        <br>
+        <form>
+          <p></p>
+          <input id="email" type="text" placeholder="type your email here">
+          <button id="emailButton" onclick="submitEmail()" type="submit">Do it!</button>
+        </form>
+        <p> </p>
+        <h4>For More Info</h4>
+        <p>Enter your name and your email address if you would like to know more information about Boulder and its amenities.</p>
+        <h4>About Boulder</h4>
+        <p>On November 7, 1861, legislation was passed making way for the state university to be located in Boulder, and on September 20, 1875, the first cornerstone was laid for the first building (Old Main Building) on the CU campus. The university officially
+          opened on September 5, 1877. Boulder adopted an anti-saloon ordinance in 1907.[16] Statewide prohibition started in Colorado in 1916[17] and ended with the repeal of national prohibition in 1933.</p>
+          <br><img src="Boulder.jpg" width=100%>
+          <br> <br><p>The city of Boulder is in Boulder Valley where the Rocky Mountains meet the Great Plains. West of the city are slabs of sedimentary stone tilted up on the foothills, known as the Flatirons. The Flatirons are a widely recognized symbol
+          of Boulder.[23] The primary water flow through the city is Boulder Creek. The creek was named well ahead of the city's founding, for all of the large granite boulders that have cascaded into the creek over the eons. It is from Boulder Creek
+          that Boulder city is believed to have taken its name. Boulder Creek has significant water flow, derived primarily from snow melt and minor springs west of the city. The creek is a tributary of the South Platte River.</p>
+      </div>
+    </div>
+    <input id="textbox5" type="text" placeholder="type your search here"><br>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+  <script src="./main.js"></script>
+</body>
+
+</html>
